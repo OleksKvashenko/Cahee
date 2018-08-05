@@ -1,0 +1,84 @@
+.container_logo {
+  background: $white url(#{$imgPath}section_top.png) no-repeat
+       100% 0;
+}
+
+.header-top {
+  padding-top: rem(45px);
+  @include display(flex);
+  @include justify-content(space-between);
+  @include align-items(center);
+}
+.logo {
+  font-family: $pacifico;
+  font-size: rem(50px);
+  line-height: 1;
+}
+
+.menu {
+  @include display(flex);
+
+  @include e(item) {
+    margin-right: 30px;
+
+    &:last-child  {
+      margin-right: 0;
+    }
+  } // ITEM
+  @include e(link) {
+    text-decoration: none;
+    color: $black;
+    font-size: rem(16px);
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-top: 7px;
+     border-top: 3px solid transparent;
+
+    &:hover {
+      border-top: 3px solid $orange;
+      //padding-top: 4px;
+    }
+  }
+}
+
+
+
+.fresh-life {
+  padding-top: 250px;
+  padding-bottom: 290px;
+  width: 33%;
+
+  @include e(title) {
+    font-size: rem(60px);
+    font-weight: 900;
+    margin-bottom: 20px;
+  }// title
+
+  @include e(content) {
+    line-height: 27px;
+    margin-bottom: 30px;
+  }
+
+  @include e(link) {
+    display: inline-block;
+    text-decoration: none;
+    font-size: rem(20px);
+    text-transform: uppercase;
+    padding: 18px 24px;
+    background: $orange;
+    color: $white;
+    box-shadow: 1px 1px 1px rgba(0,0,0, .4);
+
+    &:hover {
+      background: darken($orange, 20%);
+    }
+  }
+} // fresh-life
+
+.mouse-icon {
+  display: block;
+  margin: 0 auto 70px;
+  width: 32px;
+  height: 32px;
+}

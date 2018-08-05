@@ -1,0 +1,66 @@
+.container-fluid_yellow {
+  background: $yellow;
+  padding: 100px 0;
+}
+
+.gallery {
+
+  @include e(title) {
+    font-size: rem(90px);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 42px;
+  }
+  @include e(description) {
+    text-align: center;
+    line-height: 27px;
+    margin: 0 25%;
+    margin-bottom: 42px;
+  }
+} // gallery
+
+.row-first {
+  @include display(flex);
+  margin-bottom: 30px;
+
+  @include e(item) {
+    @include m(eight) {
+      flex: 2.16;
+      padding-right: 20px;
+    }
+    @include m(four) {
+      flex: 1;
+
+      @include display(flex);
+      @include flex-direction(column);
+      @include justify-content(space-between);
+    }
+  }
+}
+.row-second{
+  @include display(flex);
+  @include justify-content(space-between);
+  margin-bottom: 50px;
+  img {
+    flex:0 0 49%;
+
+  }
+}
+
+.btn-box {
+  text-align: center;
+}
+.btn-gallery {
+  display: inline-block;
+  margin: auto;
+  font-size: rem(20px);
+  padding: 16px 40px;
+  color: $white;
+  background: $turquoise;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.6);
+
+  &:hover {
+    background: $blue;
+  }
+}

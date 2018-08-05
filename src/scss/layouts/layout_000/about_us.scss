@@ -1,0 +1,32 @@
+.container-fluid_turquoise {
+  background: $turquoise;
+  padding: 62px 0;
+}
+
+.turquoise {
+  @include display(flex);
+  @include align-items(center);
+
+  @include e(left) {
+    order: -1;
+    flex: 1;
+  }
+  @include e(right) {
+    flex: 1;
+    padding-left: 70px;
+  }
+
+  @include e(title) {
+    font-size: rem(90px);
+    color: $white;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+
+  @include e(content) {
+    line-height: 27px;
+    color: $white;
+    margin-bottom: rem(8px);
+  }
+
+} // turquoise
